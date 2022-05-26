@@ -26,7 +26,7 @@ spring:
     host: woodpecker.rmq.cloudamqp.com
     port: 5672
     username: kdmffedc
-    password: 2-W4eKdkrc0nUY4x12OjUFQC5_akBHwG
+    password: ENC(CsUZ58Eb0zuABi41WRxVEXYgaqYIwxFMLJMYQRXzBQAL/Koi08Njxv80yHZgJdqR)
     virtual-host: kdmffedc
   boot:
     admin:
