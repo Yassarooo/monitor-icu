@@ -11,8 +11,8 @@ turbine:
 
 eureka:
   instance:
-    hostname: localhost
-    prefer-ip-address: true
+    hostname: monitor-icu.herokuapp.com
+    prefer-ip-address: false
     metadata-map:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
@@ -33,7 +33,7 @@ spring:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
       turbine:
         clusters: default
-        location: http://localhost:${turbine.stream.port}
+        location: http://monitor-icu.herokuapp.com:${turbine.stream.port}
 
 security:
   user:
