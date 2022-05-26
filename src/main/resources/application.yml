@@ -40,3 +40,7 @@ security:
   user:
     name: admin
     password: ${MONITOR_SERVER_PASSWORD:admin}
+
+jasypt:
+  encryptor:
+    password: jazaradebuggers

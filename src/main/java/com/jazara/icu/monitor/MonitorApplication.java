@@ -8,11 +8,13 @@ import org.springframework.cloud.netflix.turbine.stream.EnableTurbineStream;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableAdminServer
 @EnableTurbineStream
+@EnableEncryptableProperties
 public class MonitorApplication {
 
     public static void main(String[] args) {
