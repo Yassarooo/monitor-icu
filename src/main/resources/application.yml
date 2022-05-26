@@ -12,6 +12,7 @@ turbine:
 eureka:
   instance:
     hostname: monitor-icu.herokuapp.com
+    non-secure-port: 80
     prefer-ip-address: false
     metadata-map:
       user.name: ${security.user.name}
