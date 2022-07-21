@@ -21,9 +21,6 @@ eureka:
     service-url:
       defaultZone: https://user:${REGISTRY_SERVER_PASSWORD:password}@icu-registry.herokuapp.com/eureka/
 
-  spring.security.user.name=devglan
-  spring.security.user.password=password
-
 spring:
   security:
     user:
