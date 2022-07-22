@@ -1,6 +1,6 @@
 logging:
   level:
-    org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter: error
+    org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter: debug
 
 server:
   port: ${PORT:8040}
@@ -18,10 +18,6 @@ eureka:
       defaultZone: https://user:${REGISTRY_SERVER_PASSWORD:password}@icu-registry.herokuapp.com/eureka/
 
 spring:
-  security:
-    user:
-      name: admin
-      password: admin
   rabbitmq:
     host: woodpecker.rmq.cloudamqp.com
     port: 5672
