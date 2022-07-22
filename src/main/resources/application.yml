@@ -40,7 +40,6 @@ spring:
         clusters: default
         location: http://icu-monitor.herokuapp.com:${turbine.stream.port}
 
-
 jasypt:
   encryptor:
     password: jazaradebuggers

@@ -74,11 +74,5 @@ public class MonitorApplication {
                     .tokenValiditySeconds(1209600);
         }
 
-        // Required to provide UserDetailsService for "remember functionality"
-        @Override
-        protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-            auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN");
-        }
-
     }
 }
