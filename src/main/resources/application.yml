@@ -35,6 +35,8 @@ spring:
       turbine:
         clusters: default
         location: https://icu-monitor.herokuapp.com:${turbine.stream.port}
+      instance-auth:
+        enabled: false
 
 jasypt:
   encryptor:
