@@ -8,8 +8,8 @@ import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableAdminServer
 @EnableEncryptableProperties
+@EnableAdminServer
 public class MonitorApplication {
 
     public static void main(String[] args) {
