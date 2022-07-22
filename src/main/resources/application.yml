@@ -38,7 +38,7 @@ spring:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
       turbine:
         clusters: default
-        location: http://icu-monitor.herokuapp.com:${turbine.stream.port}
+        location: https://icu-monitor.herokuapp.com:${turbine.stream.port}
 
 jasypt:
   encryptor:
