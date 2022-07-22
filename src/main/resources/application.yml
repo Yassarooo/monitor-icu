@@ -5,43 +5,30 @@ logging:
 server:
   port: ${PORT:8040}
 
-turbine:
-  stream:
-    port:  ${PORT+1:8041}
-
 eureka:
   instance:
     hostname: icu-monitor.herokuapp.com
     non-secure-port: 80
     prefer-ip-address: false
     metadata-map:
-      user.name: ${security.user.name}
-      user.password: ${security.user.password}
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
   client:
     service-url:
       defaultZone: https://user:${REGISTRY_SERVER_PASSWORD:password}@icu-registry.herokuapp.com/eureka/
 
 spring:
+  security:
+    user:
+      name: admin
+      password: admin
   rabbitmq:
     host: woodpecker.rmq.cloudamqp.com
     port: 5672
     username: kdmffedc
     password: ENC(CsUZ58Eb0zuABi41WRxVEXYgaqYIwxFMLJMYQRXzBQAL/Koi08Njxv80yHZgJdqR)
     virtual-host: kdmffedc
-  boot:
-    admin:
-      routes:
-        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
-      turbine:
-        clusters: default
-        location: https://icu-monitor.herokuapp.com:${turbine.stream.port}
-      instance-auth:
-        enabled: false
 
 jasypt:
   encryptor:
     password: jazaradebuggers
-
-management:
-  security:
-    enabled: false
