@@ -39,3 +39,7 @@ spring:
 jasypt:
   encryptor:
     password: jazaradebuggers
+
+management:
+  security:
+    enabled: false
