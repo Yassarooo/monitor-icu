@@ -22,10 +22,6 @@ eureka:
       defaultZone: https://user:${REGISTRY_SERVER_PASSWORD:password}@icu-registry.herokuapp.com/eureka/
 
 spring:
-  security:
-    user:
-      name: admin
-      password: admin
   rabbitmq:
     host: woodpecker.rmq.cloudamqp.com
     port: 5672
